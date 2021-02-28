@@ -3,10 +3,7 @@
 }
 .product-container{
     width: 80%;
-    border-right: 1px solid gray;
+    border-right: 1px solid #D3D3D3;
     margin-left: 200px;
-    padding: 20px;
-}
-.cart-container{
-    margin-left: 20px;
+    padding-right: 10px;
 }

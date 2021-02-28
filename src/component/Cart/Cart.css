@@ -1,0 +1,10 @@
+.cart-container{
+    width: 20%;
+    margin-left: 20px;
+}
+.cart-container > p, h3{
+    text-align: center;
+}
+.cart-container table{
+    font-size: 13px;
+}

@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
 import fakeData from '../../fakeData';
 import './Shop.css';
+import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 
 const Shop = () => {
     const first10 = fakeData.slice(0,10);
     const [products, setProducts] = useState(first10)
+
+    const [cart, setCart] = useState([])
+
+    const handleProduct = (product) =>{
+        const newCart = [...cart, product]
+        setCart(newCart)
+    }
     return (
         <div className="shop-container">
             <div className="product-container">
-                <ul>
-                    {
-                        products.map(product => <li>{product.name}</li>)
-                    }
-                </ul>
+                {
+                    products.map(product => <Product products ={product} handleProduct={handleProduct} key={product.key}></Product>)
+                }
             </div>
-            <div className="cart-container">
-                <h1>This is cart container</h1>
-            </div>
+            <Cart cart={cart}></Cart>
         </div>
     );
 };

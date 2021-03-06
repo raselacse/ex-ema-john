@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Cart.css'
 
 const Cart = (props) => {
-    console.log(props)
     const cart = props.cart;
     let total = 0;
     cart.forEach(product => {

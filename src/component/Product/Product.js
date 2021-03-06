@@ -5,7 +5,6 @@ import './Product.css';
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
-    
     const features = props.products.features;
     const star = props.products.star;
     return (
@@ -32,7 +31,7 @@ const Product = (props) => {
                         <h3>Features</h3>
                         <ul>
                             {
-                                features.map(features => <li>{features.description}: {features.value}</li>)
+                                features.map(features => <li key={features.value}>{features.description}: {features.value}</li>)
                             }
                         </ul>
                     </div>
